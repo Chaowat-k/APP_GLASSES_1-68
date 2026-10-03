@@ -62,7 +62,7 @@ export default function SettingsScreen({
         <View style={{ flex: 1 }}>
           <Text style={styles.screenTitle}>การตั้งค่าระบบ (Settings)</Text>
           <Text style={styles.screenSubTitle}>
-            ปรับแต่งระยะสิ่งกีดขวาง เสียงแจ้งเตือน และการเชื่อมต่อ
+            ปรับแต่งระยะสิ่งกีดขวาง เสียงแจ้งเตือน และการเชื่อมต่อ TEST
           </Text>
         </View>
       </View>
