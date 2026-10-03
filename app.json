@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "APP_GLASSES",
-    "slug": "APP_GLASSES",
+    "name": "แว่นตาแจ้งเตือนสิ่งกีดขวาง",
+    "slug": "app-glasses",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -11,10 +11,8 @@
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
-        "foregroundImage": "./assets/android-icon-foreground.png",
-        "backgroundImage": "./assets/android-icon-background.png",
-        "monochromeImage": "./assets/android-icon-monochrome.png"
+        "backgroundColor": "#F1F5F9",
+        "foregroundImage": "./assets/android-icon-foreground.png"
       }
     },
     "web": {
