@@ -162,14 +162,14 @@ export default function SettingsScreen({
             style={styles.textInput}
             value={serverUrlInput}
             onChangeText={setServerUrlInput}
-            placeholder="http://127.0.0.1/glasses"
+            placeholder="http://127.x.x.x/glasses"
             placeholderTextColor={COLORS.textMuted}
             autoCapitalize="none"
             autoCorrect={false}
             editable={!demoSwitch}
           />
           <Text style={styles.inputHint}>
-            *มือถือในวง Wi-Fi เดียวกันใช้ IP ของเครื่อง เช่น: http://127.0.0.1/glasses
+            *มือถือในวง Wi-Fi เดียวกันใช้ IP ของเครื่อง เช่น: http://127.x.x.x/glasses
           </Text>
         </View>
 

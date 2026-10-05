@@ -74,14 +74,14 @@ export default function ServerConfigModal({ visible, onClose, onRefresh }) {
               style={styles.input}
               value={url}
               onChangeText={setUrl}
-              placeholder="เช่น http://172.20.10.10/glasses"
+              placeholder="เช่น http://127.x.x.x/glasses"
               placeholderTextColor={COLORS.textMuted}
               autoCapitalize="none"
               autoCorrect={false}
               editable={!demo}
             />
             <Text style={styles.hint}>
-              *บนมือถือใช้: http://172.20.10.10/glasses | บนเว็บใช้: http://localhost/glasses
+              *บนมือถือใช้: http://127.x.x.x/glasses | บนเว็บใช้: http://localhost/glasses
             </Text>
           </View>
 
