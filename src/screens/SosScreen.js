@@ -60,11 +60,13 @@ export default function SosScreen({
       <View style={styles.topHeader}>
         <View style={styles.headerTitleRow}>
           <View style={styles.headerIconCircle}>
-            <Ionicons name="alert-circle" size={24} color={COLORS.danger} />
+            <Ionicons name="alert-circle" size={22} color={COLORS.danger} />
           </View>
-          <View>
-            <Text style={styles.screenTitle}>ศูนย์ช่วยเหลือฉุกเฉิน (SOS)</Text>
-            <Text style={styles.screenSubTitle}>
+          <View style={styles.headerTextWrap}>
+            <Text style={styles.screenTitle} numberOfLines={1} ellipsizeMode="tail">
+              ศูนย์ช่วยเหลือฉุกเฉิน (SOS)
+            </Text>
+            <Text style={styles.screenSubTitle} numberOfLines={1} ellipsizeMode="tail">
               {hasActiveAlert
                 ? `ตรวจพบสัญญาณ SOS ค้างอยู่ ${pendingSos.length} รายการ`
                 : 'ระบบเฝ้าระวังความปลอดภัยพร้อมทำงาน'}
@@ -102,7 +104,7 @@ export default function SosScreen({
           <View style={styles.activeAlertHeader}>
             <View style={styles.activeAlertHeaderLeft}>
               <Ionicons name="warning" size={20} color={COLORS.danger} />
-              <Text style={styles.activeAlertTitle}>
+              <Text style={styles.activeAlertTitle} numberOfLines={2}>
                 สัญญาณ SOS ที่ยังไม่ได้รับทราบ ({pendingSos.length})
               </Text>
             </View>
@@ -209,6 +211,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: 12,
     shadowColor: COLORS.cardShadow,
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 1,
@@ -218,26 +221,33 @@ const styles = StyleSheet.create({
   headerTitleRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 12,
+    gap: 10,
     flex: 1,
+    minWidth: 0,
   },
   headerIconCircle: {
-    width: 44,
-    height: 44,
-    borderRadius: 14,
+    width: 40,
+    height: 40,
+    borderRadius: 12,
     backgroundColor: COLORS.dangerBg,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
     borderColor: COLORS.dangerBorder,
+    flexShrink: 0,
+  },
+  headerTextWrap: {
+    flex: 1,
+    minWidth: 0,
+    justifyContent: 'center',
   },
   screenTitle: {
-    fontSize: 17,
+    fontSize: 15.5,
     fontWeight: '700',
     color: COLORS.textPrimary,
   },
   screenSubTitle: {
-    fontSize: 12,
+    fontSize: 11.5,
     color: COLORS.textSecondary,
     marginTop: 2,
   },
@@ -248,6 +258,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     paddingVertical: 5,
     borderRadius: 12,
+    flexShrink: 0,
+    marginLeft: 8,
   },
   statusPillSafe: {
     backgroundColor: COLORS.successBg,
@@ -281,6 +293,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+    gap: 12,
     marginBottom: 12,
   },
   activeAlertHeaderLeft: {
@@ -288,17 +301,22 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 8,
     flex: 1,
+    minWidth: 0,
   },
   activeAlertTitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '800',
     color: '#991B1B',
+    flex: 1,
+    flexShrink: 1,
   },
   ackAllBtn: {
     backgroundColor: COLORS.danger,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
+    paddingHorizontal: 11,
+    paddingVertical: 6,
     borderRadius: 8,
+    flexShrink: 0,
+    marginLeft: 8,
   },
   ackAllBtnText: {
     color: COLORS.white,

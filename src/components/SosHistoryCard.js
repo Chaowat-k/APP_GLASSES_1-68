@@ -99,14 +99,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 14,
+    gap: 10,
   },
   titleRow: {
     flexDirection: 'row',
     alignItems: 'center',
     gap: 8,
+    flex: 1,
+    minWidth: 0,
   },
   title: {
-    fontSize: 16,
+    fontSize: 15.5,
     fontWeight: '700',
     color: COLORS.textPrimary,
   },
@@ -117,6 +120,8 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     borderWidth: 1,
     borderColor: COLORS.surfaceBorder,
+    flexShrink: 0,
+    marginLeft: 8,
   },
   badgeText: {
     fontSize: 12,
